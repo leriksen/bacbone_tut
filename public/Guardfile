@@ -1,0 +1,11 @@
+guard :bundler do
+  watch('Gemfile')
+end
+
+guard :haml, input: 'haml' do
+  watch %r{^.+(\.haml)$}
+end
+
+guard 'sass', :input => 'sass', :output => 'css'
+
+guard 'coffeescript', :input => 'coffee', :output => 'js'

@@ -1,0 +1,23 @@
+<a class='btn btn-primary' href='/new'>New Book</a>
+<table class='table table-hover'>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Author</th>
+      <th>Year</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    {{ #books }}
+    <tr>
+      <td>{{{name}}}</td>
+      <td>{{author}}</td>
+      <td>{{year}}</td>
+      <td>
+        <a class='btn btn-primary' href='/edit/{{id}}'>Edit</a>
+      </td>
+    </tr>
+    {{/books}}
+  </tbody>
+</table>

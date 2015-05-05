@@ -1,0 +1,20 @@
+%form.edit-book-form.form-horizontal
+  %legend
+    {{^id}}Create{{/id}}
+    {{#id}}Edit{{/id}} Book
+  .form-group
+    %label{for: 'bookName'} Title
+    %input.form-control#bookName{type: 'text', name: 'name', value: '{{name}}'}
+  .form-group
+    %label{for: 'bookAuthor'} Author
+    %input.form-control#bookAuthor{type: 'text', name: 'author', value: '{{author}}'}
+  .form-group
+    %label{for: 'bookYear'} Year
+    %input.form-control#bookYear{type: 'text', name: 'year', value: '{{year}}'}
+  %button.btn.btn-primary{type: 'submit'}
+    {{^id}}Create{{/id}}
+    {{#id}}Update{{/id}}
+  {{#id}}
+  %input{type: 'hidden', name: 'id', value: '{{id}}'}
+  %button.btn.btn-danger.delete{type: 'button'}Delete
+  {{/id}}

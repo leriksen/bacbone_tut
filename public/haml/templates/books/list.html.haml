@@ -1,0 +1,19 @@
+%a.btn.btn-primary{href: '/new'} New Book
+
+%table.table.table-hover
+  %thead
+    %tr
+      %th Title
+      %th Author
+      %th Year
+      %th
+  %tbody
+    {{ #books }}
+    %tr
+      %td {{{name}}}
+      %td {{author}}
+      %td {{year}}
+      %td
+        %a.btn.btn-primary{href: "/edit/{{id}}"} Edit
+    {{/books}}
+

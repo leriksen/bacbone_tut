@@ -1,0 +1,26 @@
+<form class='edit-book-form form-horizontal'>
+  <legend>
+    {{^id}}Create{{/id}}
+    {{#id}}Edit{{/id}} Book
+  </legend>
+  <div class='form-group'>
+    <label for='bookName'>Title</label>
+    <input class='form-control' id='bookName' name='name' type='text' value='{{name}}'>
+  </div>
+  <div class='form-group'>
+    <label for='bookAuthor'>Author</label>
+    <input class='form-control' id='bookAuthor' name='author' type='text' value='{{author}}'>
+  </div>
+  <div class='form-group'>
+    <label for='bookYear'>Year</label>
+    <input class='form-control' id='bookYear' name='year' type='text' value='{{year}}'>
+  </div>
+  <button class='btn btn-primary' type='submit'>
+    {{^id}}Create{{/id}}
+    {{#id}}Update{{/id}}
+  </button>
+  {{#id}}
+  <input name='id' type='hidden' value='{{id}}'>
+  <button class='btn btn-danger delete' type='button'>Delete</button>
+  {{/id}}
+</form>
